@@ -602,6 +602,13 @@ class Task(object):
     """
     Class for manipulating Tasks
     """
+    
+    def set_start(self, start):
+        self.start = start
+
+    def set_end(self, end):
+        self.end = end
+        
     def __init__(self, name, start=None, stop=None, duration=None, depends_of=None, resources=None, percent_done=0, color=None, fullname=None, display=True, state=''):
         """
         Initialize task object. Two of start, stop or duration may be given.
