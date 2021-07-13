@@ -1109,8 +1109,8 @@ class Task(object):
             tx = x+2
         else:
             tx = 5
-            
-        svg.add(svgwrite.text.Text(self.fullname, insert=((tx)*mm, (y + 5)*mm), fill=_font_attributes()['fill'], stroke=_font_attributes()['stroke'], stroke_width=_font_attributes()['stroke_width'], font_family=_font_attributes()['font_family'], font_size=15))
+        link = svg.add(svgwrite.container.Hyperlink('http://jira/browse/'+self.name))   # TODO: Add option for real link         
+        link.add(svgwrite.text.Text(self.fullname, insert=((tx)*mm, (y + 5)*mm), fill=_font_attributes()['fill'], stroke=_font_attributes()['stroke'], stroke_width=_font_attributes()['stroke_width'], font_family=_font_attributes()['font_family'], font_size=15))
 
         if self.resources is not None:
             t = " / ".join(["{0}".format(r.name) for r in self.resources])
