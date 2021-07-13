@@ -605,9 +605,14 @@ class Task(object):
     
     def set_start(self, start):
         self.start = start
+        self.cache_start_date = None
 
     def set_end(self, end):
-        self.end = end
+        self.stop = end
+        self.cache_end_date = None
+
+    def set_duration(self, duration):
+        self.duration = duration
         
     def __init__(self, name, start=None, stop=None, duration=None, depends_of=None, resources=None, percent_done=0, color=None, fullname=None, display=True, state=''):
         """
