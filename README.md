@@ -11,7 +11,7 @@ You can see output examples here :  http://xael.org/pages/python-gantt-en.html
 
 This projects needs the following libraries:
 
-* svgwrite see https://bitbucket.org/mozman/svgwrite/
+* svgwrite see https://github.com/mozman/svgwrite
 * dateutil see https://labix.org/python-dateutil
 
 ### Additionnal requirements ###
