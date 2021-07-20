@@ -602,6 +602,11 @@ class Task(object):
     """
     Class for manipulating Tasks
     """
+    def get_start(self):
+        return self.start
+
+    def get_end(self):
+        return self.stop
     
     def set_start(self, start):
         self.start = start
